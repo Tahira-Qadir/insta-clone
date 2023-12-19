@@ -77,3 +77,9 @@ plugins: [
 ```sh
 pnpm install @heroicons/react@v1
 ```
+
+### minifaker
+
+ ```sh
+ pnpm i minifaker
+```
