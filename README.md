@@ -83,3 +83,19 @@ pnpm install @heroicons/react@v1
  ```sh
  pnpm i minifaker
 ```
+
+### Scrollbar Plugin for Tailwind CSS
+https://www.npmjs.com/package/tailwind-scrollbar
+
+```sh
+pnpm i tailwind-scrollbar
+```
+
+ ### Add ttailwind.config.js
+
+ ```js
+ plugins: [
+    ......
+    require('tailwind-scrollbar'),
+  ]
+ ```
