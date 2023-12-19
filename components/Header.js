@@ -1,23 +1,29 @@
 import Image from "next/image";
+import { SearchIcon } from '@heroicons/react/outline'
 
 export default function Header() {
   return (
-    <div>
+    <div className="flex items-center justify-between max-w-6xl">
       {/* Left */}
-
-      <div className="flex items-center justify-between max-w-6xl"> 
         <div className="h-24 w-24 cursor-pointer relative hidden lg:inline-grid">
             <Image src="/logo.png" alt="Intagram-logo-1" layout="fill" className="object-contain" />
         </div>
         <div className="h-24 w-10 cursor-pointer relative  lg:hidden">
             <Image src="/logo2.png" alt="Intagram-logo-2" layout="fill" className="object-contain" />
         </div>
-        <h1>Right Side</h1>
-      </div>
+        
       {/* Middle */}
 
+      <div className="relative mt-1">
+        <div className="absolute top-3 left-3">
+            <SearchIcon className="h-5 text-gray-500" />
+        </div>
+        <input type='text' placeholder='Search Here' className='bg-gray-50 pl-10 border-gray-500 text-sm focus:ring-black focus: focus:border-black rounded-md' />
+      </div>
 
       {/* Right */}
+
+      <h1>Right Side</h1>
     </div>
   )
 }

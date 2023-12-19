@@ -60,3 +60,20 @@ pnpm i
  ### create icon 
 resource [Generate Favicons](https://favicon.io/)
 
+### tailwindcss/forms
+https://github.com/tailwindlabs/tailwindcss-forms
+
+```sh
+pnpm install -D @tailwindcss/forms
+```
+ ### Add ttailwind.config.js
+```js
+plugins: [
+    require('@tailwindcss/forms'),
+  ],
+```
+
+#### Install Hero Icon
+```sh
+pnpm install @heroicons/react@v1
+```
