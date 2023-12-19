@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Complete App
+instagram clone
 
-## Getting Started
+### Create Next App using tailwind CSS
+    npx create-next-app@latest insta-clone
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+``` sh
+√ Would you like to use ESLint? Yes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run the development server:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+pnpm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Install Tailwind CSS with Next.js
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+npm install -D tailwindcss postcss autoprefixer
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+npx tailwindcss init -p
+```
 
-## Learn More
+#### Open `tailwind.config.js` and add following code in module.exports
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+ 
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+#### Add globals.css
 
-To learn more about Next.js, take a look at the following resources:
+```js
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Install node_modules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+``` sh
+pnpm i
+```
+ ### create icon 
+resource [Generate Favicons](https://favicon.io/)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
