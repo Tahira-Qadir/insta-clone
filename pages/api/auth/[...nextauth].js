@@ -12,9 +12,9 @@ export const authOptions = {
   ],
 
   pages: {
-    signin : "/auth/signin"
+    signIn : "/auth/signin"
   }
-  
+
 }
 
 export default NextAuth(authOptions)

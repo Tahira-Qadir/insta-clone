@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import { HomeIcon, PlusCircleIcon, SearchIcon } from '@heroicons/react/outline'
-
+import { HomeIcon, PlusCircleIcon, SearchIcon } from "@heroicons/react/outline"
+import { useSession, signIn, signOut } from "next-auth/react"
 export default function Header() {
+    const {data: session} = useSession();
+    console.log(session)
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30">
         <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto mt-4">
@@ -20,7 +23,7 @@ export default function Header() {
                 <div className="absolute top-3 left-3">
                     <SearchIcon className="h-5 text-gray-500" />
                 </div>
-                <input type='text' placeholder='Search Here' className='bg-gray-50 pl-10 border-gray-500 text-sm focus:ring-black focus: focus:border-black rounded-md' />
+                <input type="text" placeholder="Search Here" className="bg-gray-50 pl-10 border-gray-500 text-sm focus:ring-black focus: focus:border-black rounded-md" />
             </div>
 
         {/* Right */}
@@ -28,8 +31,19 @@ export default function Header() {
             <div>
                 <div className="flex space-x-5 items-center">
                 <HomeIcon className="h-6 hidden md:inline-flex cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
-                <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
-                <img src="/profile.png" alt="Intagram-logo-2" className="h-10 cursor-pointer" />
+                {session? (
+                    <>
+                        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+                        <img 
+                        onClick={signOut}
+                        src={session.user.image}
+                        alt="user-image"
+                        className="h-10 cursor-pointer rounded-full" />
+                    </>
+                ): (
+                    <button onClick={signIn}>Sign In</button>
+                )}
+               
                 </div>
             </div>
         </div>
