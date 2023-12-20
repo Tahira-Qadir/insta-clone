@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { HomeIcon, PlusCircleIcon, SearchIcon } from "@heroicons/react/outline"
 import { useSession, signIn, signOut } from "next-auth/react"
-import { useRecoilState } from 'recoil'
-import { modalState } from '@/atom/ModalAtom'
+import { useRecoilState } from "recoil"
+import { modalState } from "@/atom/modalAtom"
 export default function Header() {
     const {data: session} = useSession();
     const [open, setOpen] = useRecoilState(modalState)

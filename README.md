@@ -125,3 +125,11 @@ https://recoiljs.org/
 ```sh
 pnpm install recoil
 ```
+
+### Search react-modal on Google Chrome
+
+https://www.npmjs.com/package/react-modal
+
+```sh
+pnpm install --save react-modal
+```
