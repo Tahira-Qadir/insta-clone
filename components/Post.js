@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { DotsHorizontalIcon } from "@heroicons/react/outline";
+import { BookmarkIcon, ChatIcon, DotsHorizontalIcon, HeartIcon } from "@heroicons/react/outline";
 
 
 export default function Post({img, userImg, caption, userName, id}) {
@@ -22,6 +22,16 @@ export default function Post({img, userImg, caption, userName, id}) {
       {/* Post Image */}
 
       <img className="object-cover w-full" src= {img} alt="" />
+
+       {/* Post Buttons */}
+
+        <div className='flex justify-between px-4 pt-4'>
+            <div className='flex space-x-4 '>
+                <HeartIcon className='btn' />
+                <ChatIcon className='btn' />
+            </div>
+            <BookmarkIcon className='btn' />
+        </div>
     </div>
   )
 }
