@@ -99,3 +99,23 @@ pnpm i tailwind-scrollbar
     require('tailwind-scrollbar'),
   ]
  ```
+
+ ### Install next-auth
+https://next-auth.js.org/
+
+```sh
+pnpm add next-auth
+```
+
+### FireBase
+
+https://firebase.google.com/
+
+ After created the project on firebase
+
+```sh
+pnpm install firebase
+```
+
+### cloud google 
+https://cloud.google.com/
