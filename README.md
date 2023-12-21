@@ -133,3 +133,11 @@ https://www.npmjs.com/package/react-modal
 ```sh
 pnpm install --save react-modal
 ```
+
+### Search react moment on Google Chrome
+
+https://www.npmjs.com/package/react-moment
+
+```sh
+pnpm i react-moment
+```
