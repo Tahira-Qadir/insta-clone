@@ -89,7 +89,7 @@ export default function Post({img, userImg, caption, userName, id}) {
         <div className="mx-10 max-h-24 overflow-y-scroll scrollbar-none">
           {comments.map(comment =>(
             // eslint-disable-next-line react/jsx-key
-            <div className="flex items-center space-x-2 mb-2">
+            <div key={comment.data().id} className="flex items-center space-x-2 mb-2">
               <img className="h-7 rounded-full object-cover" src={comment.data().userImg} alt="user-image"></img>
               <p className="font-semibold ">{comment.data().username}</p>
               <p className="flex-1 truncate">{comment.data().comment}</p>
